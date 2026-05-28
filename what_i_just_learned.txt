@@ -2,5 +2,13 @@ drop_duplicates plays an important role in deleting duplicate rows, While the dr
 this enables us to find duplicate rows from that specific columns
 ex. drop_duplicates(['user_id','title']) -> means delete only those rows which is having rows from this column same 
 
+Pivot table is a summary table that reorganizes the data to make it easier to read and analyze.
+df.pivot_table(
+    index   = 'user_id',   # what becomes ROWS
+    columns = 'title',     # what becomes COLUMNS
+    values  = 'rating'     # what fills the cells
+)                                                   enables the user to what to put on the table 
+
 CSR Matrix (Compressed Sparse Row) stores a matrix by saving only the non-zero values instead of storing everything including zeros.
 this makes it memory efficient, so now the csr matrix will only remember non-zero ratings
+
